@@ -9,6 +9,12 @@ G = ice.scalar_multiplication(1)
 N = ice.N
 ZERO = ice.Zero
 
+def getk1(r1, s1, z1, r2, s2, z2, diff):
+    return ((z1 * s2 - z2 * s1) * inv(r1 * (s1 - s2))) % N
+
+def getpvk(r1, s1, z1, r2, s2, z2, diff):
+    return ((z1 * s2 - z2 * s1) * inv(r1 * (s1 - s2)) + diff) % N
+
 def get_rs(sig):
     rlen = int(sig[2:4], 16)
     r = sig[4:4+rlen*2]
