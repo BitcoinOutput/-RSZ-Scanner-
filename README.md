@@ -27,7 +27,7 @@
    git clone https://github.com/harshjamdar/RSZ-Scanner.git
 
 2. Install the required dependencies:
-   cd bitcoin-tx-analyzer
+   cd RSZ-Scanner
    pip install -r requirements.txt 
 ```
 ## Usage
